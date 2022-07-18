@@ -36,13 +36,13 @@ tl
     
     ease: "expo.out",
     stagger: .3
-  }, "-=.3")
+  }, "-=.5")
   .from([".avatar", ".card__profileDetails"], {
     x: -20,
     autoAlpha: 0,
     ease: "expo.out",
     stagger: .3
-  })
+  }, "<")
   .from(".attribution", {
     autoAlpha: 0,
   })
