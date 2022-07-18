@@ -1,0 +1,159 @@
+$ff: "Outfit", sans-serif;
+$fs: 1.125rem;
+$fw-xsm: 300;
+$fw-sm: 400;
+$fw-bold: 600;
+$SoftBlue: hsl(215, 51%, 70%);
+$Cyan: hsl(178, 100%, 50%);
+$CyanTransparent: rgba(0, 255, 247, 0.7);
+
+$VeryDarkBlue--MainBG: hsl(217, 54%, 11%);
+$VeryDarkBlue--CardBG: hsl(216, 50%, 16%);
+$VeryDarkBlue--Line: hsl(215, 32%, 27%);
+$White: hsl(0, 0%, 100%);
+:root {
+	box-sizing: border-box;
+}
+body {
+  font-family: $ff;
+	font-size: $fs;
+	background-color: $VeryDarkBlue--MainBG;
+	color: $SoftBlue;
+  line-height: 1.5;
+}
+.container {
+	display: flex;
+	// justify-content: center;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 100vh;
+	padding: 3em 1em 0;
+	flex-direction: column;
+}
+*,
+::before,
+::after {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+.section{
+	overflow: hidden;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.card {
+	max-width: 350px;
+	background-color: $VeryDarkBlue--CardBG;
+	padding: 1.2em;
+	border-radius: 0.8em;
+  &  * > * {
+    margin-bottom: 1.1em;
+  }
+}
+.card__img {
+	width: 100%;
+	height: 270px;
+	background-image: url(../images/icon-view.svg),
+		url(../images/image-equilibrium.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 0px, cover;
+	border-radius: 0.5em;
+	margin-bottom: 1em;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+  &:hover {
+    background-image: url(../images/icon-view.svg),
+      url(../images/image-equilibrium.jpg);
+    background-color: $CyanTransparent;
+    background-size: 50px, cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-blend-mode: screen;
+  }
+}
+
+.card__title {
+	text-decoration: none;
+	color: $White;
+	display: inline-block;
+	font-weight: $fw-bold;
+	font-size: 1.4rem;
+  margin-top: .4em;
+	margin-bottom: 0.8em;
+	transition: all 0.3s ease-out;
+  &:hover {
+    color: $Cyan;
+  }
+}
+.card__rate {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid $VeryDarkBlue--Line;
+  margin-bottom: .6em;
+  & figure {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+  }
+  & img + figcaption {
+    margin-left: 0.5em;
+  }
+  & figcaption {
+    font-size: .9rem;
+  }
+}
+
+.ethereum {
+	color: $Cyan;
+  font-weight: $fw-bold;
+  letter-spacing: 1px;
+}
+.card__profile {
+	display: flex;
+	align-items: center;
+	margin: 0;
+  & > * {
+    margin: 0;
+  }
+}
+.avatar {
+	width: 30px;
+	height: 30px;
+	border: 1px solid $White;
+	border-radius: 50%;
+	margin: 0;
+}
+
+.card__profileDetails {
+	font-size: .9rem;
+	margin-left: 0.7em;
+	a {
+		margin: 0;
+		font-size: .9rem;
+		font-weight: $fw-sm;
+    color: $White;
+    text-decoration: none;
+	}
+  & a:hover {
+    color: $Cyan;
+  }
+}
+
+.attribution {
+	margin-top: 1em;
+	margin-bottom: .3em;
+	font-size: 11px;
+	text-align: center;
+	a {
+		color: hsl(228, 45%, 44%);
+	}
+}
