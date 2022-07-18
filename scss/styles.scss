@@ -24,11 +24,12 @@ body {
 .container {
 	display: flex;
 	// justify-content: center;
-	justify-content: space-between;
+	// justify-content: space-between;
 	align-items: center;
 	min-height: 100vh;
 	padding: 3em 1em 0;
 	flex-direction: column;
+	gap: 2em;
 }
 *,
 ::before,
